@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView mStatus, mPair;
     private ImageView mStatusIcon;
-    private Button mTurnOn, mTurnOff, mDiscover, mPaired;
     private BluetoothAdapter bluetoothAdapter;
 
     @Override
@@ -35,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
 
         mStatusIcon = findViewById(R.id.blicon);
 
-        mTurnOn = findViewById(R.id.switch_on);
-        mTurnOff = findViewById(R.id.switch_off);
-        mDiscover = findViewById(R.id.blfind);
-        mPaired = findViewById(R.id.blpair);
+        Button mTurnOn = findViewById(R.id.switch_on);
+        Button mTurnOff = findViewById(R.id.switch_off);
+        Button mDiscover = findViewById(R.id.blfind);
+        Button mPaired = findViewById(R.id.blpair);
 
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
@@ -135,7 +134,10 @@ public class MainActivity extends AppCompatActivity {
 
                 mStatusIcon.setImageResource(R.drawable.ic_baseline_bluetooth_128);
                 showMessage("Bluetooth is On");
-            } else { showMessage("Bluetooth is Off"); }
+            } else {
+                mStatusIcon.setImageResource(R.drawable.ic_baseline_bluetooth_disabled_128);
+                showMessage("Bluetooth is Off");
+            }
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
