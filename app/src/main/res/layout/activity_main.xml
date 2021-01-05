@@ -55,7 +55,7 @@
 
     <!-- Get list of paired device button  -->
     <Button
-        android:id="@+id/pair"
+        android:id="@+id/blpair"
         style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
         android:text="@string/pair"
         android:minWidth="200dp"
@@ -64,15 +64,11 @@
 
     <!-- Show paired device -->
     <TextView
-        android:id="@+id/blpair"
+        android:id="@+id/pair"
         android:layout_width="match_parent"
         android:text=""
         android:minWidth="200dp"
         android:textColor="@color/black"
         android:layout_height="wrap_content"/>
-
-
-
-
 
 </LinearLayout>
