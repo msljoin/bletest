@@ -7,4 +7,5 @@
     <string name="pair">Get pair</string>
     <string name="n_available">Bluetooth is not available</string>
     <string name="is_available">Bluetooth is available</string>
+    <string name="paired_dev">Paired Devices</string>
 </resources>
